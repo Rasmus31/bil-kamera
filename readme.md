@@ -148,10 +148,6 @@ Gå in i templates mappen med `cd templates` och skapa ny fil med namnet `index.
     <footer>>
       <hr>
       <p> @2021 Developed by Rasmus</p>
-      <p>links for refrences:</p>
-      <p> https://github.com/EbenKouao/SmartCCTV-Camera</p>
-      <p>https://github.com/Mjrovai/Video-Streaming-with-Flask</p>
-      <p>https://github.com/The1lama/python-car-L298N-motor-driver-with-web-controller</p>
     </footer>
   </body>
 </html>
@@ -210,15 +206,6 @@ GPIO.setmode(GPIO.BCM)
 
 
 """   <setup>   """
-#setting variables for GPIO pins 17, 27, 10
-led1 = 17
-led2 = 27
-led3 = 10
-
-#set each led as an output:
-GPIO.setup(led1, GPIO.OUT)
-GPIO.setup(led2, GPIO.OUT)
-GPIO.setup(led3, GPIO.OUT)
 #setup pins variable for left motor:
 in1 = 24
 in2 = 23
@@ -471,15 +458,6 @@ GPIO.setmode(GPIO.BCM)
 Den hära delen av koden är all installation och variablar för bilen. 
 in1 har variablen 24 och när man kör `GPIO.setup` kan man se att då kommer variablen in1 så att koden vet att in1 har GPIO.OUT på BMC pin 24 på raspberry pi, och deta gör vi för alla pins som vi använder till bilenp `2=GPIO.PWM(en2,150)` och `p.start(25)` de bestämmer hur snabbt motorerna ska spina och starta.
 ````python
-#setting variables for GPIO pins 17, 27, 10
-led1 = 17
-led2 = 27
-led3 = 10
-
-#set each led as an output:
-GPIO.setup(led1, GPIO.OUT)
-GPIO.setup(led2, GPIO.OUT)
-GPIO.setup(led3, GPIO.OUT)
 #setup pins variable for left motor:
 in1 = 24
 in2 = 23
